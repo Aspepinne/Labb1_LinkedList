@@ -4,7 +4,6 @@ public class LinkedList {
 
     Node head = null;
     Node tail = null;
-    int count = 0;
 
     public void add(int e){
         Node addNode = new Node(e);
@@ -70,7 +69,7 @@ public class LinkedList {
     }
     public int size(){
         Node current = head;
-        count = 0;
+        int count = 0;
         while(current != null){
             count++;
             current = current.next;

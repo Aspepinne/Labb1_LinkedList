@@ -2,14 +2,14 @@ package com.company;
 
 public class Stack extends LinkedList{
     public void push(int i){
-        add(i);
+        add(0, i);
     }
     public int pop(){
         int returnValue = peek();
-        remove(size()-1);
+        remove(0);
         return returnValue;
     }
     public int peek(){
-        return get(size()-1);
+        return get(0);
     }
 }
