@@ -25,11 +25,12 @@ public class LinkedList {
             head = addNode;
         }
         else {
-            for (int j = 0; j==i-1; j++){
-                addNode.next = addNode;
+            Node node = head;
+            for (int j = 0; j < i-1; j++){
+                node = node.next;
             }
-            tail.next = addNode;
-            tail = addNode;
+            addNode.next = node.next;
+            node.next = addNode;
         }
     }
     public boolean contains(int e){
@@ -56,11 +57,10 @@ public class LinkedList {
             head = head.next;
         }
         else {
-            for (int j = 0; j < i; j++) {
+            for (int j = 0; j < i; j++){
                 prev = temp;
                 temp = temp.next;
             }
-
             prev.next = temp.next;
         }
     }
@@ -84,7 +84,7 @@ public class LinkedList {
         }
     }
 }
-class Node {
+class Node{
     int data;
     Node next;
     public Node(int data){

@@ -6,13 +6,13 @@ public class Main {
         LinkedList linkedList = new LinkedList();
         Stack stack = new Stack();
         Que que = new Que();
-        que.enque(1);
-        que.enque(2);
-        System.out.println(que.peek());
-        System.out.println(que.deque());
-        System.out.println(que.peek());
-        que.enque(3);
-        System.out.println(que.deque());
-        System.out.println(que.peek());
+
+        linkedList.add(1);
+        linkedList.add(2);
+        linkedList.add(3);
+        linkedList.add(1,99);
+        linkedList.add(2,99);
+        linkedList.show();
+
     }
 }
